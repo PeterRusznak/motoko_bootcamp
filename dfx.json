@@ -3,6 +3,10 @@
       "first_canister": {
         "main": "main.mo",
         "type": "motoko"
+      },
+      "second_canister": {
+        "main": "second.mo",
+        "type": "motoko"
       }
     
     }
