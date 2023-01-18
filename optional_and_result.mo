@@ -2,6 +2,17 @@ import Result "mo:base/Result";
 
 actor {
   stable var state = 0;
+  
+  
+  let names : [(Nat,Text)] = [(0,"Motoko"), (1,"Rust"), (2,"JavaScript")];
+  public query func find_name(name : Text) : async ?Nat {
+      for((index, language) in names.vals()){
+          if (language == name){
+              return ?index;
+          };
+      };
+      return null; // We haven't found any match so we return null.
+  };
 
 
    
