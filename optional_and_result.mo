@@ -1,7 +1,12 @@
 import Result "mo:base/Result";
+import Option "mo:base/Option";
 
 actor {
   stable var state = 0;
+  
+  public query func always_return_a_nat(n : ?Nat) : async Nat {
+        return(Option.get(n, 999))
+  };
   
   
   let names : [(Nat,Text)] = [(0,"Motoko"), (1,"Rust"), (2,"JavaScript")];
