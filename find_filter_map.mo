@@ -5,6 +5,14 @@ import Array "mo:base/Array";
 
 actor Fufu {
 
+let f = func(x :Nat): Nat{
+  return x**2;
+};
+
+public query func mapper(arr: [Nat]): async [Nat]{
+  return Array.map<Nat, Nat>(arr, f);
+};
+
 public query func find(arg : [Nat]) : async ?Nat {
   return Array.find<Nat>(arg,func x = x > 8  );
 };
