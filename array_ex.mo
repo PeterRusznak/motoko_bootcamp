@@ -7,4 +7,7 @@ let mut_val_imm_arr : [var Nat] = [var 1,2,3]; // array marad, a valuet ki lehet
 
 var mut_val_mut_arr : [var Nat] = [var 1,2,3]; // minden cserélhető
 
+let arr [Nat] = [1,2,3];
+arr.vals().size() // igy 
+
 };
