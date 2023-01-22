@@ -13,9 +13,13 @@ How to deploy several canisters:
 
 Backend canister:
 
-´dfx canister --network ic create dao --with-cycles 1000000000000
+dfx canister --network ic create dao --with-cycles 1000000000000
+
+
 dfx build --network ic dao
-dfx canister --network ic install dao´
+
+
+dfx canister --network ic install dao
 
 which creates canister_ids.json with the following content:
  "dao": {
